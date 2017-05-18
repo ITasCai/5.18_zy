@@ -101,7 +101,13 @@ namespace _5._18_zy
             #endregion
 
 
-            #region 
+            #region 8.	在一次考试中，两名学生张三和李四的考试成绩分别为55,67。定义一个方法，方法要求成绩小于60分的同学    可以酌情增加5分,分别使用ref out输出新的成绩。
+
+            //int num1 = 55;
+            //int num2 = 67;
+            //int num3 = Score(ref num1,ref num2);
+            //Console.WriteLine("结果为:{0}",num3);
+            //Console.ReadKey();
 
             #endregion
             #region 9.	已知一个数组 int [] arryNumber={29,30,12,9,40,78,90};要求创建一个方法,打印数组的所有元素和最小值，返回数组所有元素之和。
@@ -115,13 +121,29 @@ namespace _5._18_zy
             #endregion
             #region 10.	创建一个方法，用来统计输入字符串中字母的个数。  提示：使用字符串的方法ToCharArray()将字符串输出一个数组类型的字符数组。
 
-            Console.WriteLine("请输入一个字符串");
-            string str = Console.ReadLine();
-            int count = GetCount(str);
-            Console.WriteLine("字符串中的字母个数为{0}：", count);
-            Console.ReadLine();
+            //Console.WriteLine("请输入一个字符串");
+            //string str = Console.ReadLine();
+            //int count = GetCount(str);
+            //Console.WriteLine("字符串中的字母个数为{0}：", count);
+            //Console.ReadLine();
 
             #endregion
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="num1">值一</param>
+        /// <param name="num2">值二</param>
+        /// <returns></returns>
+        private static int Score(ref int num1, ref int num2)
+        {
+            int num = ((num1 < 60) ? num1 : 60)<num2? ((num1 < 60) ? num1 : 60):num2;
+            int num3 = num + 5;
+
+            return num3;
+
         }
 
         /// <summary>
